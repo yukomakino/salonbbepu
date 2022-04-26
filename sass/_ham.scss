@@ -1,0 +1,120 @@
+// ハンバーガーメニュー
+
+// ボタンのチェックを非表示にする
+.menu-hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.menu-btn {
+    display: flex;
+    height: 70px;
+    width: 40px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 90;
+}
+
+// ham menu icon
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: #3B4043;
+    position: absolute;
+    transition: 0.5s;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.menu-btn span:before {
+    bottom: 8px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.menu-btn span:after {
+    top: 8px;
+    width: 12px;
+}
+
+// 三本線を×に表示させる
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    width: 20px;
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+
+// menu装飾
+.sp-navmenu {
+    width: 100%;
+    height: 65%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    // menuを画面外へ
+    z-index: 80;
+    background-color: #D0C5BA;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+// ボタンがタップされた時にmenuが表示されるように
+#menu-btn-check:checked ~ .sp-navmenu {
+    left: 0;/*メニューを画面内へ*/
+}
+
+.sp-navmenu ul {
+    padding: 70px 10px 0;
+}
+.sp-navmenu ul li {
+    border-bottom: solid 1px #3B4043;
+    list-style: none;
+}
+.sp-navmenu ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color:#3B4043;
+    text-decoration: none;
+    padding: 5px 15px 5px 0;
+    position: relative;
+}
+.sp-navmenu ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #3B4043;
+    border-right: solid 2px #3B4043;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 35px;
+}
+
+//チェックボックスのチェックを外す
+// <script>
+// $(function() {
+//   $('.ham-menu-item a').on('click', function(event) {
+//     $('#nav-input').prop('checked', false);
+//   });
+// });
+// </script>

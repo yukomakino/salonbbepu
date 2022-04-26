@@ -1,0 +1,73 @@
+#access {
+    width: 100%;
+    background-color: #A193861F;
+
+}
+
+.access-wrap {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    
+    @include tab {
+        height: 100%;
+    }
+
+    @include sp {
+        width:100%;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.access-items {
+    padding: 105px;
+    width: 35%;
+    background-color: #D0C5BA;
+
+    @include tab {
+        width: 100%;
+        order: 1;
+        padding: auto;
+    }
+
+    @include sp {
+        padding: 30px;
+    }
+}
+
+.shop-name {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #00000038;
+    margin-bottom: 30px;
+}
+
+.shop-info {
+    font-size: 1.6rem;
+    color: #fff;
+
+    & p {
+        margin-bottom: 23px;
+
+    }
+}
+
+.shop-map {
+    position: relative;
+    width: 65%;
+
+    @include tab {
+        width: 100%;
+        padding-top: 60%;
+    }
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,84 @@
+#first-v {
+    width: 100%;
+    height: 800px;
+
+    @include tab {
+        height: 600px;
+    }
+
+.first-v-wrap {
+    display: flex;
+    font-size: 3.8rem;
+    position: relative;
+
+    @include tab {
+        // position: unset;
+        height: 100vh;
+    }
+
+    .first-item {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        @include tab {
+            color: #fff;
+            position: absolute;
+            z-index: 20;
+            width: 100%;
+            top: 45%;
+            transform: translate(0, -50%);
+            
+            
+            
+        }
+        
+        .first-title {
+            font-family: serif;
+            margin-bottom: 60px;
+            
+            @include tab {
+                order: 1;
+                font-size: 2.2rem;
+            }
+        }
+    
+        .first-message {
+            // font-family: 'Nothing You Could Do', cursive;
+            font-family: 'Mrs Saint Delafield', cursive;
+            font-size: 8rem;
+            letter-spacing: 0.3rem;
+            
+            @include tab {
+                font-size: 5rem;
+                margin-bottom: 30px;
+            }
+
+        }
+
+
+    }
+
+    .first-img {
+        width: 50%;
+        height: 800px;
+        background-image: url(../img/first-v-pc.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include tab {
+            width: 100%;
+            height: 600px;
+            background-image: url(..//img/first-v-sp.png);
+            object-fit: cover;
+
+        }
+        
+    }
+
+
+}
+}

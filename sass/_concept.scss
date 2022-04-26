@@ -1,0 +1,108 @@
+#concept {
+    width: 100%;
+    color: #fff;
+
+    background: linear-gradient(180deg,#A193861F 0%,#A193861F 40%,#A1938689 100px,#A1938689 100%);
+    
+    @include tab {
+        background: linear-gradient(180deg,#A193861F 0%,#A193861F 25%,#A1938689 100px,#A1938689 100%);
+
+    }
+
+    .concept-wrap {
+        width: 100%;
+
+        .concept-img {
+            width: 100%;
+            height: 60vh;
+
+            @include tab {
+                height: 30vh;
+            }
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .concept-img_1 {
+                    width: 62%;
+
+                    @include tab {
+                        width: 49%;
+                    }
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                        @include tab {
+                            object-position: 95% 50%;
+                        }
+
+                    }
+                }
+
+                .concept-img_2 {
+                    width: 36%;
+                    
+                    @include tab {
+                        width: 48%;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+                
+            }
+            
+            
+            
+        }
+
+        .concept-message {
+            display: flex;
+            padding: 70px 0 0;
+            width: 85%;
+            margin: 0 auto;
+            align-items: center;
+
+            @include tab {
+                width: 90%;
+                flex-direction: column;
+                padding-bottom: 65px;
+            }
+        
+            .concept-title {
+                width: 50%;
+                font-size: 4rem;
+                font-family: serif;
+
+                @include tab {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.8rem;
+                    margin-bottom: 25px;
+                }
+            }
+
+            .concept-text {
+                width: 50%;
+                font-size: 1.6rem;
+                line-height: 160%;
+
+                @include tab {
+                    width: 100%;
+                }
+
+            }
+        }
+
+    }
+}

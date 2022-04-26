@@ -1,0 +1,61 @@
+#menu {
+    width: 100%;
+}
+
+.menu-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include tab {
+        flex-direction: column;
+    }
+    
+}
+
+.menu-item {
+    // 271/1066=26%
+    width: 26%;
+    
+    @include tab {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+}
+
+.menu-img {
+    width: 100%;
+    height: 316px;
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.menu-content {
+    padding: 15px;
+    font-size: 1.6rem;
+
+}
+
+.menu-content-title {
+    font-size: 3rem;
+    margin: 34px auto;
+    text-align: center;
+
+    @include tab {
+        text-align: left;
+    }
+}
+
+.menu-content-text {
+    line-height: 150%;
+}
+
+.menu-content-price {
+    margin-top: 34px;
+    text-align: right;
+}
